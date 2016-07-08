@@ -102,7 +102,7 @@ remove()는 next()나 previous()에 의해 마지막으로 호출된 element를 
 			it.remove();
         }
 
-
+### 알고스팟 정리 ###
 최종적으로 아래와 같은 코드를 얻었습니다. remove()는 항상 next()나 previous()를 실행해서 반환된 element를 제가한다는 사실 유념하세요.
 
 아래의 코드는 온라인저지를 통과하기는 했지만 사실 sorting을 하지 않는 코드라 볼완전합니다. 아니면 sorting할 필요가 없다는 것을 증명해야 합니다.
