@@ -36,3 +36,27 @@
 
 `survivors.set()`을 바로 사용하니 에러가 날 수 밖에 없습니다.
 
+사실 아래처럼 get()을 사용해도 충분합니다.
+
+ 	static void josephus(int n, int k) {
+        LinkedList<Integer> survivors = new LinkedList<Integer>();
+        for(int i = 1; i <= n; ++i) {
+            survivors.add(i);;
+        }
+
+        for(int i = 0; i < n; ++i) {
+            System.out.println(survivors.get(i));
+        }
+    }
+
+### 자바 이터레이터 연습 ###
+이터레이터를 이용해 내용을 채워봅시다.
+
+혹시 아래와 같이 사용하면 `illegalstateexception`이 나옵니다. 자세한 내용은 [stackoveflow](http://stackoverflow.com/questions/22361194/iterator-remove-illegalstateexception)을 보세요.
+
+	ListIterator<Integer> it = survivors.listIterator();
+        if(it.hasNext()) {
+            it.next();
+            it.remove();
+        }
+
